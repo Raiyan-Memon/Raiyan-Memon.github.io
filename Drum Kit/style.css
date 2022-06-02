@@ -46,3 +46,21 @@ button:hover{
         opacity: 0.5;
    
 }
+
+input{
+    border: white;
+}
+
+
+@media all and (max-width: 1200px) {
+   
+    .mobileinput{
+        display: block;
+       text-align: center;
+    }
+
+    input{
+        border: 2px solid black;
+    }
+  }
+
