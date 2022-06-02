@@ -1,0 +1,88 @@
+* {
+    background-color: black;
+    color: white;
+}
+
+.container {
+
+    /* align-items: center; */
+    text-align: center;
+    /* margin-top: 30%; */
+    
+}
+
+img {
+    margin: 0 auto;
+    transition: 2s;
+}
+
+.playername {
+    /* display: inline-block; */
+    position: relative;
+    margin: 0 auto;
+}
+
+.player1,
+.player2 {
+    display: inline-block;
+    text-align: center;
+    /* width: 15%; */
+    width: 150px;
+    /* transition: 3s; */
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    background-color: rgb(63, 63, 220);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    /* transition: 1s; */
+}
+
+button:hover {
+    background-color: darkblue;
+    transition: 0.566s;
+    box-shadow: 10px;
+
+}
+
+#winningplayer {
+    transition: 1s;
+    /* display: inline-block; */
+
+}
+
+@media all and (max-width: 500px) {
+    /* * {
+        background-color: red;
+    } */
+
+    .player1,
+    .player2 {
+        display: inline-block;
+        width: 150px;
+    }
+
+    .container {
+
+        /* align-items: center; */
+        text-align: center;
+        margin-top: 50%;
+        
+    }
+}
+
+footer{
+   
+    position:fixed;
+    bottom:0;
+text-align: center;
+width: 100%;
+
+}
+
+.instalink{
+    text-decoration: none;
+}
