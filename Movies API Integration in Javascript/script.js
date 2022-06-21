@@ -1,6 +1,6 @@
-var APIURL ="http://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=2";
-const IMGPATH = "http://image.tmdb.org/t/p/w1280";
-const SEARCHAPI ="http://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=";
+var APIURL ="https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=2";
+const IMGPATH = "https://image.tmdb.org/t/p/w1280";
+const SEARCHAPI ="https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=";
 
 //API for image optimisation
 const imgapilink = "http://api.resmush.it/ws.php?img=";
@@ -12,7 +12,7 @@ const imgapilink = "http://api.resmush.it/ws.php?img=";
 
 for(var i = 1; i<=10; i++){
 
-    var APIURL ="http://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page="+i;
+    var APIURL ="https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page="+i;
 
 const rootdata = document.querySelector('#root');
 
@@ -35,7 +35,7 @@ async function getmovies(api) {
         // console.log(imgapilink + IMGPATH + item.poster_path);
         var processimg =imgapilink + IMGPATH + item.poster_path;
         // console.log("path");
-        console.log(processimg);
+        // console.log(processimg);
 
 
 
@@ -165,7 +165,7 @@ function searchGet(data){
 ///https://image.tmdb.org/t/p/w1280/iPS4ju4Po7n7RIpR4yRMSw3k8oG.jpg
 
 
-const imgurl = 'http://image.tmdb.org/t/p/w1280/iPS4ju4Po7n7RIpR4yRMSw3k8oG.jpg';
+const imgurl = 'https://image.tmdb.org/t/p/w1280/iPS4ju4Po7n7RIpR4yRMSw3k8oG.jpg';
 //images
 
 // const imgapilink1 = "http://api.resmush.it/ws.php?img=";
