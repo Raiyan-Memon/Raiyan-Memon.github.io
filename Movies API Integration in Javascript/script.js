@@ -3,7 +3,7 @@ const IMGPATH = "https://image.tmdb.org/t/p/w1280";
 const SEARCHAPI ="https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=";
 
 //API for image optimisation
-const imgapilink = "http://api.resmush.it/ws.php?img=";
+// const imgapilink = "http://api.resmush.it/ws.php?img=";
 
 
 
@@ -33,35 +33,14 @@ async function getmovies(api) {
             // console.log(item.poster_path);
 
         // console.log(imgapilink + IMGPATH + item.poster_path);
-        var processimg =imgapilink + IMGPATH + item.poster_path;
+        // var processimg =imgapilink + IMGPATH + item.poster_path;
         // console.log("path");
         // console.log(processimg);
 
 
 
         
-myfun(processimg);
 
-async function myfun(data1){
-    
-
-    //Quality for compression
-const url = 'qlty=10';
-//passing parameters in url
-const params = new URLSearchParams(url);
-
-    // console.log(data1);
-    var response = await fetch(data1,{
-        method : 'post',
-        body : params
-    });     
-
-    // console.log(params);   
-    var data = await response.json();
-    // console.log(data.dest);
-
-    var destimg = data.dest;
-    // console.log(destimg);
 
 
     const box  =   document.createElement("div");
@@ -70,7 +49,7 @@ const params = new URLSearchParams(url);
     box.innerHTML = `
 
    
-    <img src="${destimg}" alt="">
+    <img src="${IMGPATH + item.poster_path}" alt="">
 
     
     <h4>${item.title}</h4>
@@ -82,7 +61,7 @@ const params = new URLSearchParams(url);
 
 
     // alert('raiasdf');
-}
+
 
 
 
