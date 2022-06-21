@@ -35,7 +35,7 @@ async function getmovies(api) {
         // console.log(imgapilink + IMGPATH + item.poster_path);
         var processimg =imgapilink + IMGPATH + item.poster_path;
         // console.log("path");
-        // console.log(processimg);
+        console.log(processimg);
 
 
 
