@@ -87,8 +87,7 @@ function searchGet(data){
     // alert(data);
 
     if(data == ''){
-        // alert('No Movie Found, Please Check the Spelling or try different name.');
-        alert('Manasi, I Love You');
+        alert('No Movie Found, Please Check the Spelling or try different name.');
 
         location.reload()
     }
