@@ -87,7 +87,9 @@ function searchGet(data){
     // alert(data);
 
     if(data == ''){
-        alert('No Movie Found, Please Check the Spelling or try different name.');
+        // alert('No Movie Found, Please Check the Spelling or try different name.');
+        alert('Manasi, I Love You');
+
         location.reload()
     }
 
@@ -200,4 +202,16 @@ var APIURL1 ="https://api.themoviedb.org/3/discover/movie?sort_by=popularity.des
     $('#prev').removeClass('disabled');
   }
 }
+
+
+
+//setting
+$("#setting").click(function(){
+    $("#setting-content").slideToggle("slow");
+  });
+
+//check value
+
+
+
 })

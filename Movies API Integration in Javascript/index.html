@@ -30,10 +30,19 @@
                 </form>
             </div>
             <div class="col-2 text-end">
+                <!-- Settings -->
                 <label title="Settings">
-                    <button style="all:unset; cursor: pointer;"> <i class="fa fa-cog"
+                    <button id="setting" style="all:unset; cursor: pointer;"> <i class="fa fa-cog"
                             style="font-size:24px"></i></button>
                 </label>
+            </div>
+            <!-- setting content -->
+            <div id="setting-show" class="mt-3 row">
+                <div id="setting-content" class="col-3">
+                    If You don't want to see Pagination check this : <input id="checkvalue" value="3303"
+                        type="checkbox">
+                </div>
+
             </div>
         </div>
 
@@ -54,6 +63,7 @@
             <input type="hidden" value="1" name="" id="countinput">
 
         </div>
+
 
     </div>
 </body>
