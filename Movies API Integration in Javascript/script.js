@@ -78,7 +78,7 @@ async function searchFun()
     var searchres = await fetch(searchval);
     var searchjson =await searchres.json();
 
-    $('.inputwidth').val('');
+    // $('.inputwidth').val('');
     $('.inputwidth').blur();
      searchGet(searchjson.results);
     }
