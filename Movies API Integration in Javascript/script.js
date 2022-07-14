@@ -44,11 +44,13 @@ async function getmovies(api) {
 //   init call function
  getmovies(APIURL);
 
-}
+ } //forloop
 
 
 
-$('.search').on('click', searchFun);
+// $('.search').on('click', searchFun);
+
+$(document).on('click', '.search', searchFun );
 
 async function searchFun()
 {
@@ -57,6 +59,14 @@ async function searchFun()
 
     var searchdata = $('.inputwidth').val();
 
+    if( $('.inputwidth').val() == ''){
+       
+        location.reload()
+       
+    }else{
+
+   
+
     console.log(searchdata);
 
     var searchval = SEARCHAPI + searchdata;
@@ -64,12 +74,24 @@ async function searchFun()
     var searchres = await fetch(searchval);
     var searchjson =await searchres.json();
 
+    $('.inputwidth').val('');
+    $('.inputwidth').blur();
      searchGet(searchjson.results);
+    }
 };
 
 
 
 function searchGet(data){
+
+    // alert(data);
+
+    if(data == ''){
+        alert('No Movie Found, Please Check the Spelling or try different name.');
+        location.reload()
+    }
+
+ 
 
     const rootdata = document.querySelector('#searched');
 
@@ -85,9 +107,8 @@ function searchGet(data){
             <img src="${IMGPATH + item.poster_path}" loading="lazy" decoding="async" alt="">
             <h4>${item.title}</h4>
              `;
-
-
             rootdata.appendChild(box);
+
         }
     )
 }
@@ -96,9 +117,9 @@ function searchGet(data){
 
 
 //on click of submit
-// $('#submit').on('click', function (e) { 
-//     e.preventDefault();
-//  })
+$('#submit').on('click', function (e) { 
+    e.preventDefault();
+ })
 
 
  //pagination-custom

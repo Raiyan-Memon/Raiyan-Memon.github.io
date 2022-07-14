@@ -10,16 +10,34 @@
     <link rel="stylesheet" href="style.css">
     <script src="jquery.js"></script>
     <script src="script.js"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 
     <div class="container-fluid custom-container">
 
-        <div class="input-div">
-            <input type="text" class="inputwidth" placeholder="Search for any movies" value="">
-            <button type="submit" id="submit" class="btn btn-primary custom-btn search">Search</button>
+        <!-- <div class="input-div"> -->
+
+        <div class="row mb-3" style="width: 100%">
+            <div class="col-8 text-end">
+                <form action="/index.html">
+                    <input type="text" class="inputwidth" placeholder="Search for any movies" value="">
+            </div>
+            <div class="col-2">
+                <button type="submit" id="submit" class="btn btn-primary custom-btn search">Search</button>
+                </form>
+            </div>
+            <div class="col-2 text-end">
+                <label title="Settings">
+                    <button style="all:unset; cursor: pointer;"> <i class="fa fa-cog"
+                            style="font-size:24px"></i></button>
+                </label>
+            </div>
         </div>
+
+        <!-- </div> -->
 
         <div class="custom-row" id="searched"> </div>
         <div class="custom-row" id="root">
