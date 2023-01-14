@@ -42,9 +42,9 @@ $(function () {
           console.log(item.title);
           const box = document.createElement("div");
           box.classList.add("custom");
-          box.innerHTML = `
-                <img src="${IMGPATH + item.poster_path}" loading="lazy" decoding="async" alt="">
-                <h4>${item.title}</h4>
+          box.innerHTML = `<div class="getdetail" id="${item.id}">
+            <img  src="${IMGPATH + item.poster_path}" loading="lazy" decoding="async" alt="">
+                <h4 >${item.title}</h4></div>
                 `;
           rootdata.appendChild(box);
         });
@@ -68,13 +68,10 @@ $(function () {
     }
   };
 
-
-
   //on click of submit
   $('#submit').on('click', function (e) {
     e.preventDefault();
   })
-
 
   //pagination-custom
   //on click of prev
@@ -138,14 +135,25 @@ $(function () {
     }
   }
 
-
-
   //setting
   $("#setting").click(function () {
     $("#setting-content").slideToggle("slow");
   });
 
-  //check value
+
+
+
+  //getdetail
+$('body').on('click','.getdetail' ,function(){
+ 
+alert($(this).attr('id')); 
+
+var id = $(this).attr('id');
+
+
+
+
+})
 
 
 
