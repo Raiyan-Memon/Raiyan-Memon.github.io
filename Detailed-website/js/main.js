@@ -15,7 +15,7 @@ $(function() {
   const options = {
     containers: ["#swup", "#swupMenu"],
     animateHistoryBrowsing: true,
-    linkSelector: 'a:not([data-no-swup])'
+    // linkSelector: 'a:not([data-no-swup])'
   };
   const swup = new Swup(options);
 
