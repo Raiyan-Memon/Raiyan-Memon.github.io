@@ -239,7 +239,7 @@ $(function() {
     }
   });
 
-  bar.animate(.95);
+  bar.animate(.85);
 
   // Contact form
   $('.art-input').keyup(function() {
