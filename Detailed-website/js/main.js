@@ -22,12 +22,12 @@ $(function() {
   // scrollbar
   Scrollbar.use(OverscrollPlugin);
   Scrollbar.init(document.querySelector('#scrollbar'), {
-    damping: 0.05,
+    damping: 1,
     renderByPixel: true,
     continuousScrolling: true,
   });
   Scrollbar.init(document.querySelector('#scrollbar2'), {
-    damping: 0.05,
+    damping: 1,
     renderByPixel: true,
     continuousScrolling: true,
   });
